@@ -17,22 +17,19 @@
     <aside>
         <img src="{%static 'main/img/restaurant_logotype.png'%}" alt="">
         <span class="logotype">Счастье есть</span>
-        <h3>Навигация</h3>
-        <ul>
-            <a href="{%url 'home'%}"><li><i class="bi bi-telephone-outbound-fill"></i>Главная</li></a>
-            <a href="{% url 'menu_home'%}"><li><i class="bi bi-shop-window"></i> Меню</li></a>
-            <a href="{% url 'about'%}"><li><i class="bi bi-file-earmark-person-fill"></i>О нас</li></a>
-            <a href=""><li><i class="bi bi-info-circle-fill"></i>Контакты</li></a>
-            <a href=""><li><i class="bi bi-headphones"></i> Поддержка</li></a>
-            <a href="{%url 'reviews'%}">
-                <li><i class="bi bi-star"></i> Отзывы</li>
+        <p>
+            <a id="homebtn" href="{%url 'home'%}"><i class="bi bi-telephone-outbound-fill"></i>Главная</a>
+            <a id="homebtn" href="{% url 'menu_home'%}"><i class="bi bi-shop-window"></i> Меню</a>
+            <a id="homebtn" href="{% url 'about'%}"><i class="bi bi-file-earmark-person-fill"></i>О нас</a>
+            <a id="homebtn" href=""><i class="bi bi-info-circle-fill"></i>Контакты</a>
+            <a id="homebtn" href=""><i class="bi bi-headphones"></i> Поддержка</a>
+            <a id="homebtn" href="{%url 'reviews'%}">
+            <i id="homebtn" class="bi bi-star"></i> Отзывы
             </a>
-            <a href="{%url 'basket'%}">
-                <li><i class="bi bi-basket"></i> Корзина</li>
-            </a>
-            
-            
-        </ul>
+            <a id="homebtn" href="{%url 'basket'%}">
+            <i class="bi bi-basket"></i> Корзина
+            </p>
+    <hr>
     </aside>
     
     
