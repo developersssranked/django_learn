@@ -1,0 +1,23 @@
+{% extends 'main\layout.html' %}
+{% block title%}Наши отзывы{% endblock%}
+{% block content %}
+<div class="features">
+    <h1>Отзывы</h1>
+    <div class="reviews_body"></div>
+        
+        {% for el in reviewss%}
+            <div class="reviews_item">
+                <h3>{{el.title}}</h3>
+                <h3>{{el.username}}</h3>
+                <h3>{{el.reviews_text}}</h3>
+                <h3>{{el.score}}</h3>
+            </div>
+        {%endfor%}
+    </div>
+    <button class="btn btn-info" href="{%url 'create'%}">Добавить отзыв</button>
+    
+
+  
+
+</div>
+{%endblock%}

@@ -1,0 +1,14 @@
+{% extends 'main\layout.html' %}
+{% block title%}Холодные роллы{% endblock%}
+{% block content %}
+<div class="features">
+    <h1>Холодные роллы</h1>
+    {%for el in menus%}
+        {% if 'Холодные роллы' in el.category %}    
+            <h3>{{el.title}}</h3>
+        {% endif %}
+    {%endfor%}
+    
+
+</div>
+{%endblock%}

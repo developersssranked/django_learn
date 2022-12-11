@@ -1,0 +1,26 @@
+{% extends 'main\layout.html' %}
+{% block title%}Меню{% endblock%}
+{% block content %}
+<div class="features">
+    <h1>Наше меню</h1>
+    <a href="{%url 'desserts' %}"><button class="btn btn-warning">Дессерты</button></a>
+    <a href="{%url 'cook-rolls' %}"><button class="btn btn-warning">Запеченные роллы</button></a>
+    <a href="{%url 'cold-rolls' %}"><button class="btn btn-warning">Холодные роллы</button></a>
+    <a href="{%url 'hot-rolls' %}"><button class="btn btn-warning">Горячие роллы</button></a>
+    <a href="{%url 'drinks' %}"><button class="btn btn-warning">Напитки</button></a>
+    <a href="{%url 'hot-dishes' %}"><button class="btn btn-warning">Горячие блюда</button></a>
+    <a href="{%url 'salads' %}"><button class="btn btn-warning">Салаты</button></a>
+    <a href="{%url 'soups' %}"><button class="btn btn-warning">Супы</button></a>
+    {%for el in menus%}
+        <div class="alert alert-warning">
+            <h3>{{el.title}}</h3>
+            <h6>{{el.price}} рублей</h6>
+            <h6>{{el.description}}</h6>
+            <h1>{{el.compound}}</h1>
+            <img src="{{el.img.url}}" alt="Картинка не подгрузилась">
+            <button class="btn btn-warning" >  Заказать </button>
+        </div>
+    {%endfor%}
+        
+</div>
+{%endblock%}
